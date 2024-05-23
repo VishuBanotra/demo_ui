@@ -282,7 +282,7 @@ const Landing_2 = () => {
         src={Right}
         sx={{
           position: "absolute",
-          top: "996px",
+          top: "1150px",
           right: 0,
           width: "auto",
           height: "auto",
