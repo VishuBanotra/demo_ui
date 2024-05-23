@@ -1,11 +1,14 @@
 import { Box, Button, Stack, TextField, Typography } from "@mui/material";
-import React from "react";
+import React, { useEffect } from "react";
 import Logo from "../../assets/Common/Logo.svg";
 import Left from "../../assets/Home_2/Left.svg";
 import Right from "../../assets/Home_2/Right.svg";
 import Mobile from "../../assets/Home_2/Mobile.svg";
 import Robot_2 from "../../assets/Home_2/Robot_2.svg";
 import Frequency from "../../assets/Home_2/Frequency.svg";
+
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const ButtonStyling = {
   padding: "8px 12px",
@@ -25,6 +28,9 @@ const ButtonStyling = {
 };
 
 const Landing_2 = () => {
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
   return (
     <Box
       sx={{
@@ -108,145 +114,156 @@ const Landing_2 = () => {
       </Box>
 
       {/* Mobile Form */}
-      <Box
-        sx={{
-          width: "100%",
-          maxWidth: "1400px",
-        }}
-      >
-        <Typography
-          component={"h1"}
+      <div data-aos="fade-down">
+        <Stack
+          direction={"row"}
+          justifyContent={"space-around"}
+          alignItems={"center"}
           sx={{
-            position: "absolute",
-            fontFamily: "Mulish",
-            fontWeight: 800,
-            fontSize: "167px",
-            top: "892px",
-            color: "#FF4D00",
+            width: "100%",
+            maxWidth: "1400px",
           }}
         >
-          Sales
-        </Typography>
-        <Box
-          sx={{
-            width: "460px",
-            height: "840px",
-            margin: "auto",
-            backgroundImage: `url(${Mobile})`,
-            backgroundSize: "contain",
-            backgroundRepeat: "no-repeat",
-            backgroundPosition: "center",
-            position: "relative",
-          }}
-        >
-          <Box
-            sx={{
-              width: "345px",
-              height: "730px",
-              position: "absolute",
-              borderRadius: "41px",
-              top: "23px",
-              left: "50%",
-              transform: "translateX(-50%)",
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              justifyContent: "center",
-            }}
-          >
-            <Box>
-              <Box
-                sx={{
-                  display: "block",
-                  width: "297px",
-                  height: "189px",
-                  margin: "0 auto",
-                  marginBottom: "33px",
-                }}
-                component={"img"}
-                src={Robot_2}
-              />
-              <Box
-                sx={{
-                  display: "block",
-                  width: "324.53px",
-                  height: "26.94px",
-                  margin: "0 auto",
-                  marginBottom: "33px",
-                }}
-                component={"img"}
-                src={Frequency}
-              />
-            </Box>
+          <div data-aos="fade-left"> 
             <Typography
+              component={"h1"}
               sx={{
                 fontFamily: "Mulish",
                 fontWeight: 800,
-                fontSize: "24px",
-                textAlign: "center",
-                lineHeight: "36px",
-                marginBottom: "20px",
+                fontSize: "167px",
+                top: "892px",
+                color: "#FF4D00",
               }}
             >
-              Talk to our voicebot
+              Sales
             </Typography>
-
-            <form action="">
-              <Stack width={279} spacing={1}>
-                <TextField placeholder="Name" />
-                <TextField placeholder="Email" />
-                <TextField placeholder="Email" />
-              </Stack>
+          </div>
+          <Box>
+            <Box
+              sx={{
+                width: "460px",
+                height: "840px",
+                margin: "auto",
+                backgroundImage: `url(${Mobile})`,
+                backgroundSize: "contain",
+                backgroundRepeat: "no-repeat",
+                backgroundPosition: "center",
+                position: "relative",
+              }}
+            >
               <Box
                 sx={{
+                  width: "345px",
+                  height: "730px",
+                  position: "absolute",
+                  borderRadius: "41px",
+                  top: "23px",
+                  left: "50%",
+                  transform: "translateX(-50%)",
                   display: "flex",
+                  flexDirection: "column",
                   alignItems: "center",
                   justifyContent: "center",
-                  marginTop: "43px",
                 }}
               >
-                <Button
+                <Box>
+                  <Box
+                    sx={{
+                      display: "block",
+                      width: "297px",
+                      height: "189px",
+                      margin: "0 auto",
+                      marginBottom: "33px",
+                    }}
+                    component={"img"}
+                    src={Robot_2}
+                  />
+                  <Box
+                    sx={{
+                      display: "block",
+                      width: "324.53px",
+                      height: "26.94px",
+                      margin: "0 auto",
+                      marginBottom: "33px",
+                    }}
+                    component={"img"}
+                    src={Frequency}
+                  />
+                </Box>
+                <Typography
                   sx={{
-                    width: "217px",
-                    height: "44px",
-                    padding: "8px 12px",
-                    borderRadius: "7px",
-                    border: "1px solid #FF8744",
-                    backgroundColor: "#FF4D00",
                     fontFamily: "Mulish",
-                    fontWeight: 700,
-                    fontSize: "14px",
-                    lineHeight: "17px",
-                    color: "#FFFFFF",
-                    ":hover": {
-                      backgroundColor: "#FF8744",
-                    },
+                    fontWeight: 800,
+                    fontSize: "24px",
+                    textAlign: "center",
+                    lineHeight: "36px",
+                    marginBottom: "20px",
                   }}
                 >
-                  Request a callback
-                </Button>
+                  Talk to our voicebot
+                </Typography>
+
+                <form action="">
+                  <Stack width={279} spacing={1}>
+                    <TextField placeholder="Name" />
+                    <TextField placeholder="Email" />
+                    <TextField placeholder="Email" />
+                  </Stack>
+                  <Box
+                    sx={{
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      marginTop: "43px",
+                    }}
+                  >
+                    <Button
+                      sx={{
+                        width: "217px",
+                        height: "44px",
+                        padding: "8px 12px",
+                        borderRadius: "7px",
+                        border: "1px solid #FF8744",
+                        backgroundColor: "#FF4D00",
+                        fontFamily: "Mulish",
+                        fontWeight: 700,
+                        fontSize: "14px",
+                        lineHeight: "17px",
+                        color: "#FFFFFF",
+                        ":hover": {
+                          backgroundColor: "#FF8744",
+                        },
+                      }}
+                    >
+                      Request a callback
+                    </Button>
+                  </Box>
+                </form>
               </Box>
-            </form>
+            </Box>
           </Box>
-        </Box>
-        <Typography
-          component={"h1"}
-          sx={{
-            position: "absolute",
-            fontFamily: "Mulish",
-            fontWeight: 800,
-            fontSize: "167px",
-            top: "892px",
-            right: "200px",
-            backgroundImage: "linear-gradient(90deg, #FF4D00 0%, #FFA06B 100%)",
-            backgroundClip: "text",
-            textFillColor: "transparent",
-            display: "inline",
-          }}
-        >
-          Agent
-        </Typography>
-      </Box>
+          <div data-aos="fade-right">
+          <Typography
+            component={"h1"}
+            sx={{
+              fontFamily: "Mulish",
+              fontWeight: 800,
+              fontSize: "167px",
+              top: "892px",
+              right: "200px",
+              backgroundImage:
+                "linear-gradient(90deg, #FF4D00 0%, #FFA06B 100%)",
+              backgroundClip: "text",
+              textFillColor: "transparent",
+              display: "inline",
+            }}
+          >
+            Agent
+          </Typography>
+          </div>
+          
+        </Stack>
+      </div>
 
       {/* Decorative Images */}
       <Box

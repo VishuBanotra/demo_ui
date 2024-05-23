@@ -4,6 +4,15 @@ import Hero_Img from "../../assets/Home/Hero_Img.jpeg";
 import Robot from "../../assets/Home/Robot.svg";
 import Meeting_Icon from "../../assets/Home/Meeting_Icon.svg";
 
+/*
+fade-up
+fade-down 
+fade-right
+fade-left
+zoom-in
+flip-right
+*/
+
 const Landing = () => {
   return (
     <Box
@@ -85,25 +94,30 @@ const Landing = () => {
             </Box>
           </Box>
 
-          <Box
-            component={"img"}
-            src={Robot}
-            sx={{
-              width: "129px",
-              height: "192px",
-              position: "absolute",
-              top: "212px",
-              left: "50%",
-              transform: "translateX(-50%)",
-            }}
-          />
+          <div data-aos="fade-up">
+            <Box
+              component={"img"}
+              src={Robot}
+              sx={{
+                width: "129px",
+                height: "192px",
+                position: "absolute",
+                top: "112px",
+                left: "50%",
+                transform: "translateX(-50%)",
+              }}
+            />
+          </div>
+
+          <div data-aos="fade-down">
+
           <Box
             sx={{
               width: "598px",
               height: "190px",
               position: "absolute",
               left: "50%",
-              top: "432px",
+              top: "325px",
               transform: "translateX(-50%)",
             }}
           >
@@ -121,6 +135,7 @@ const Landing = () => {
               Automate your pre-sales
             </Typography>
           </Box>
+          </div>
 
           <Box
             sx={{

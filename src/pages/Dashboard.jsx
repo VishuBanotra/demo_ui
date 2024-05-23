@@ -34,6 +34,9 @@ import Burger from "../assets/Dashboard/Burger.svg";
 import Avatar from "../assets/Dashboard/Table/Avatar1.svg";
 import Settings from "../assets/Dashboard/Settings.svg";
 
+import Aos from "aos";
+import "aos/dist/aos.css";
+
 const drawerWidth = 290;
 const drawerHeight = 528;
 
@@ -115,11 +118,16 @@ const Footer = styled(Box)(({ theme, open }) => ({
 export default function PersistentDrawerLeft() {
   const [open, setOpen] = React.useState(false);
 
+  React.useEffect(() => {
+    Aos.init({ duration: 1000 });
+  }, []);
+
   const handleDrawer = () => {
     setOpen(!open);
   };
 
   return (
+    <div data-aos="fade-down">
     <Box sx={{ overflowY: "hidden", display: "flex" }}>
       <CssBaseline />
       <AppBar
@@ -290,6 +298,8 @@ export default function PersistentDrawerLeft() {
               margin: "0 auto",
             }}
           >
+            <div data-aos="fade-down">
+
             <Stack direction="row" spacing="10px" justifyContent={"center"}>
               {mockCardData.map((card, index) => {
                 return (
@@ -305,14 +315,21 @@ export default function PersistentDrawerLeft() {
                 );
               })}
             </Stack>
+            </div>
             <Stack
               sx={{ margin: "16px 0" }}
               direction={"row"}
               spacing={"16px"}
               justifyContent={"center"}
             >
-              <Bargraph />
-              <EmailSent />
+              <div data-aos="fade-right">
+                <Bargraph />
+              </div>
+              <div data-aos="fade-left">
+                <EmailSent />
+              </div>
+
+
             </Stack>
             <Stack
               sx={{ margin: "36px 0" }}
@@ -343,7 +360,12 @@ export default function PersistentDrawerLeft() {
                 );
               })}
             </Stack>
+
+             
+
             <TableComponent />
+          
+          
           </Box>
         </Box>
       </Main>
@@ -359,7 +381,7 @@ export default function PersistentDrawerLeft() {
           lineHeight: "17px",
           color: "#9CA3AF",
         }}
-      >
+        >
         <Typography>Copyright © 2023 Elstar All rights reserved.</Typography>
         <Stack direction={"row"} alignItems={"center"} gap={2}>
           <Typography>Term & Conditions</Typography>
@@ -368,5 +390,6 @@ export default function PersistentDrawerLeft() {
         </Stack>
       </Footer>
     </Box>
+  </div>
   );
 }

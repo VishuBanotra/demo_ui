@@ -1,14 +1,24 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Header from "../components/ui/Header.jsx";
 import Landing from "../components/ui/Landing.jsx";
 import Landing_2 from "../components/ui/Landing_2.jsx";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const Home = () => {
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
   return (
     <div>
       <Header />
-      <Landing />
-      <Landing_2 />
+      <div data-aos="fade-up">
+        <Landing />
+      </div>
+
+      <div data-aos="zoom-in">
+        <Landing_2 />
+      </div>
     </div>
   );
 };
