@@ -4,22 +4,13 @@ import Hero_Img from "../../assets/Home/Hero_Img.jpeg";
 import Robot from "../../assets/Home/Robot.svg";
 import Meeting_Icon from "../../assets/Home/Meeting_Icon.svg";
 
-/*
-fade-up
-fade-down 
-fade-right
-fade-left
-zoom-in
-flip-right
-*/
-
 const Landing = () => {
   return (
     <Box
       sx={{
         width: "100%",
         height: "calc(100vh - 84px)",
-        backgroundImage: `url(${Hero_Img})`,
+        background: `url(${Hero_Img})`,
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
         display: "flex",
@@ -28,81 +19,100 @@ const Landing = () => {
         overflow: "hidden",
       }}
     >
+      {/* Outer Circle */}
       <Box
         sx={{
-          height: "1009px",
-          width: "1009px",
-          borderRadius: "100%",
-          backgroundColor: "#3D496087",
-          display: "flex",
+          height: { xs: "100vh", md: "870px", lg: "1009px" },
+          width: { xs: "100%", md: "870px", lg: "1009px" },
+          borderRadius: { md: "100%" },
+          backgroundColor: { xs: "rgba(0, 0, 0, 0.5)", md: "#3D496087" },
+          display: { md: "flex" },
           alignItems: "center",
           justifyContent: "center",
           position: "relative",
         }}
       >
+        {/* Inner Circle */}
         <Box
           sx={{
-            height: "795px",
-            width: "795px",
-            borderRadius: "100%",
-            backgroundColor: "#0F1B31B2",
+            padding: "0 10px",
+            height: { xs: "100%", md: "650px", lg: "795px" },
+            width: { xs: "100%", md: "650px", lg: "795px" },
+            borderRadius: { md: "100%" },
+            backgroundColor: { md: "#0F1B31B2" },
           }}
         >
-          <Box
-            sx={{
-              height: "161px",
-              width: "161px",
-              borderRadius: "100%",
-              backgroundColor: "#FF5E00",
-              position: "absolute",
-              top: "273px",
-              left: "100%",
-              transform: "translateX(-50%)",
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "center",
-              alignItems: "center",
-            }}
-          >
-            <Box
-              component={"img"}
-              src={Meeting_Icon}
-              sx={{
-                height: "24px",
-                width: "24px",
-              }}
-            />
+          {/* Side Circle */}
+          <div data-aos="fade-up">
             <Box
               sx={{
-                width: "127px",
-                height: "60px",
-                marginTop: "5px",
+                height: "161px",
+                width: "161px",
+                borderRadius: "100%",
+                backgroundColor: "#FF5E00",
+                position: "absolute",
+                top: {
+                  xs: "19px",
+                  sm: "23px",
+                  md: "15px",
+                  lg: "120px",
+                },
+                left: {
+                  xs: "84%",
+                  sm: "91%",
+                  md: "85%",
+                  lg: "90%",
+                  xl: "110%",
+                },
+                transform: "translateX(-50%)",
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "center",
+                alignItems: "center",
               }}
             >
-              <Typography
+              <Box
+                component={"img"}
+                src={Meeting_Icon}
                 sx={{
-                  fontFamily: "Mulish",
-                  fontWeight: "800",
-                  fontSize: "15px",
-                  lineHeight: "20px",
-                  textAlign: "center",
-                  color: "#FFFFFF",
+                  height: "24px",
+                  width: "24px",
+                }}
+              />
+              <Box
+                sx={{
+                  width: "127px",
+                  height: "60px",
+                  marginTop: "5px",
                 }}
               >
-                Book a 30 minutes meeting <Box component={"span"}> with us</Box>
-              </Typography>
+                <Typography
+                  sx={{
+                    fontFamily: "Mulish",
+                    fontWeight: "800",
+                    fontSize: "15px",
+                    lineHeight: "20px",
+                    textAlign: "center",
+                    color: "#FFFFFF",
+                  }}
+                >
+                  Book a 30 minutes meeting{" "}
+                  <Box component={"span"}> with us</Box>
+                </Typography>
+              </Box>
             </Box>
-          </Box>
+          </div>
 
+          {/* Robot Icon */}
           <div data-aos="fade-up">
             <Box
               component={"img"}
               src={Robot}
               sx={{
-                width: "129px",
-                height: "192px",
+                width: { xs: "100px", lg: "129px" },
+                height: { xs: "192px", lg: "192px" },
                 position: "absolute",
-                top: "112px",
+                top: { xs: "140px", md: "40px", lg: "112px" },
                 left: "50%",
                 transform: "translateX(-50%)",
               }}
@@ -110,40 +120,39 @@ const Landing = () => {
           </div>
 
           <div data-aos="fade-down">
-
-          <Box
-            sx={{
-              width: "598px",
-              height: "190px",
-              position: "absolute",
-              left: "50%",
-              top: "325px",
-              transform: "translateX(-50%)",
-            }}
-          >
-            <Typography
-              variant="h3"
+            <Box
               sx={{
-                textAlign: "center",
-                color: "#FFFFFF",
-                fontFamily: "Mulish",
-                fontWeight: "800",
-                lineHeight: "95.12px",
-                fontSize: "82px",
+                width: { xs: "100%", md: "598px" },
+                height: { md: "190px" },
+                position: "absolute",
+                left: "50%",
+                top: { xs: "320px", md: "245px", lg: "325px" },
+                transform: "translateX(-50%)",
               }}
             >
-              Automate your pre-sales
-            </Typography>
-          </Box>
+              <Typography
+                variant="h3"
+                sx={{
+                  textAlign: "center",
+                  color: "#FFFFFF",
+                  fontFamily: "Mulish",
+                  fontWeight: "800",
+                  lineHeight: { md: "95.12px" },
+                  fontSize: { xs: "51px", sm: "65px", md: "82px" },
+                }}
+              >
+                Automate your pre-sales
+              </Typography>
+            </Box>
           </div>
 
           <Box
             sx={{
-              width: "420px",
+              width: { xs: "380px", md: "420px" },
               height: "27px",
               position: "absolute",
               left: "50%",
-              top: "656px",
+              top: { xs: "460px", sm: "500px", md: "590px", lg: "656px" },
               transform: "translateX(-50%)",
             }}
           >
@@ -185,11 +194,12 @@ const Landing = () => {
               height: "40px",
               position: "absolute",
               left: "50%",
-              top: "743px",
+              top: { xs: "570px", sm: "600px", md: "660px", lg: "743px" },
               transform: "translateX(-50%)",
             }}
           >
             <Button
+              disableElevation
               sx={{
                 borderRadius: "32px",
                 padding: "8px 32px",

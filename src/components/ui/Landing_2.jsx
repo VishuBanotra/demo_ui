@@ -84,6 +84,8 @@ const Landing_2 = () => {
         </Typography>
       </Box>
 
+
+
       {/* Subheading */}
       <Box
         sx={{
@@ -107,11 +109,18 @@ const Landing_2 = () => {
         </Typography>
       </Box>
 
+
+
+
       {/* Buttons */}
       <Box sx={{ display: "flex", gap: "15px", marginBottom: "60px" }}>
         <Button sx={ButtonStyling}>VISIT OUR WEBSITE</Button>
         <Button sx={ButtonStyling}>BOOK A MEETING</Button>
       </Box>
+
+
+
+
 
       {/* Mobile Form */}
       <div data-aos="fade-down">
@@ -266,6 +275,7 @@ const Landing_2 = () => {
       </div>
 
       {/* Decorative Images */}
+      {/* These are the Deorative Images */}
       <Box
         component="img"
         src={Left}
