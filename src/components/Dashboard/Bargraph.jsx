@@ -12,8 +12,6 @@ import {
   Title,
   Tooltip,
   Legend,
-  scales,
-  plugins,
 } from "chart.js";
 
 ChartJS.register(
@@ -63,11 +61,12 @@ const Bargraph = () => {
   return (
     <Box
       sx={{
-        width: "1022px",
+        width: { xs: "90%", xl: "1022px" },
+        margin: "16px auto",
         height: "368px",
         border: "1px solid #374151",
         borderRadius: "8px",
-        overflow: "hidden", // Ensure no overflow from the container
+        overflow: "hidden",
       }}
     >
       <Box
@@ -75,7 +74,7 @@ const Bargraph = () => {
           width: "100%",
           height: "100%",
           padding: "20px",
-          boxSizing: "border-box", // Ensure padding is included in the box size
+          boxSizing: "border-box",
         }}
       >
         <Bar options={options} data={barGraphData} />

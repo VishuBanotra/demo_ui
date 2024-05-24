@@ -13,6 +13,7 @@ import {
   ListItemText,
   Drawer,
   Toolbar,
+  Divider,
 } from "@mui/material";
 
 // Svg
@@ -70,16 +71,17 @@ const Header = () => {
         {["About", "How it works", "Pricing"].map((text, index) => (
           <ListItem key={text} disablePadding>
             <ListItemButton>
-              <ListItemText sx={linkStyle} primary={text} />
+              <ListItemText disableTypography sx={linkStyle} primary={text} />
             </ListItemButton>
           </ListItem>
         ))}
-        <ListItem>
+        <ListItem sx={{ display: { md: "none" } }}>
           <Button sx={buttonStyle} disableElevation disableRipple>
             Signup / Login
           </Button>
         </ListItem>
       </List>
+      <Divider />
     </Box>
   );
 

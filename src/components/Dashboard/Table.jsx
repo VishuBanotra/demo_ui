@@ -82,13 +82,14 @@ const tableCellStyle = {
   fontWeight: 600,
   fontSize: "14px",
   lineHeight: "20px",
-  
 };
 
 const TableComponent = () => {
   return (
     <Card
       sx={{
+        width: { xs: "90%", xl: "100%" },
+        margin: "auto",
         height: "423px",
         border: "1px solid #374151",
         borderRadius: "8px",

@@ -6,8 +6,9 @@ const EmailSent = () => {
   return (
     <Box
       sx={{
-        width: "503px",
+        width: { xs: "90%", md: "90%", lg: "503px" },
         height: "400px",
+        margin: { xs: "16px auto" },
         borderRadius: "8px",
         border: "1px solid #374151",
         padding: "20px",
@@ -30,7 +31,7 @@ const EmailSent = () => {
         </Box>
         <Box
           sx={{
-            width: "463px",
+            width: { xs: "100%", lg: "463px" },
             height: "247px",
             display: "flex",
             justifyContent: "center",
