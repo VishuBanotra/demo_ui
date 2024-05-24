@@ -16,9 +16,7 @@ const Home = () => {
         <Landing />
       </div>
 
-      <div data-aos="zoom-in">
-        <Landing_2 />
-      </div>
+      <Landing_2 />
     </div>
   );
 };

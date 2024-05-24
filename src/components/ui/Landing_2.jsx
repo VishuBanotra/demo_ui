@@ -29,7 +29,7 @@ const ButtonStyling = {
 
 const Landing_2 = () => {
   useEffect(() => {
-    Aos.init({ duration: 2000 });
+    Aos.init({ duration: 1000 });
   }, []);
   return (
     <Box
@@ -40,106 +40,119 @@ const Landing_2 = () => {
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        paddingTop: "120px",
-        paddingBottom: "60px",
+        padding: "120px 10px 60px 10px",
       }}
     >
-      {/* Logo */}
-      <Box sx={{ height: "86px", width: "429px", marginBottom: "60px" }}>
-        <Box component="img" src={Logo} sx={{ width: "100%" }} />
-      </Box>
+      {/*Top Logo */}
+      <div data-aos="fade-up">
+        <Box
+          sx={{
+            height: "86px",
+            width: { xs: "339px", md: "429px" },
+            marginBottom: "60px",
+          }}
+        >
+          <Box component="img" src={Logo} sx={{ width: "100%" }} />
+        </Box>
+      </div>
 
       {/* Main Heading */}
-      <Box
-        sx={{
-          width: "100%",
-          maxWidth: "1225px",
-          marginBottom: "60px",
-          textAlign: "center",
-        }}
-      >
-        <Typography
-          component="h3"
+      <div data-aos="fade-up">
+        <Box
           sx={{
-            fontWeight: 800,
-            fontFamily: "Mulish",
-            lineHeight: "86px",
-            fontSize: "64px",
+            width: "100%",
+            maxWidth: "1225px",
+            marginBottom: "60px",
+            textAlign: "center",
           }}
         >
-          Get 2x Revenue With{" "}
-          <Box
+          <Typography
+            component="h3"
             sx={{
-              backgroundImage:
-                "linear-gradient(90deg, #FF4D00 0%, #FFA06B 100%)",
-              backgroundClip: "text",
-              textFillColor: "transparent",
-              display: "inline",
+              fontWeight: 800,
+              fontFamily: "Mulish",
+              lineHeight: "86px",
+              fontSize: "64px",
             }}
-            component="span"
           >
-            Gen A.I. Powered Sales Agent{" "}
-          </Box>
-          To Your Customers
-        </Typography>
-      </Box>
-
-
+            Get 2x Revenue With{" "}
+            <Box
+              sx={{
+                backgroundImage:
+                  "linear-gradient(90deg, #FF4D00 0%, #FFA06B 100%)",
+                backgroundClip: "text",
+                textFillColor: "transparent",
+                display: "inline",
+              }}
+              component="span"
+            >
+              Gen A.I. Powered Sales Agent{" "}
+            </Box>
+            To Your Customers
+          </Typography>
+        </Box>
+      </div>
 
       {/* Subheading */}
-      <Box
-        sx={{
-          width: "100%",
-          maxWidth: "1204px",
-          marginBottom: "60px",
-          textAlign: "center",
-        }}
-      >
-        <Typography
+      <div data-aos="fade-up">
+        <Box
           sx={{
-            fontFamily: "Mulish",
-            fontWeight: 800,
-            fontSize: "24px",
-            lineHeight: "36px",
-            color: "#000000",
+            width: "95%",
+            maxWidth: "1204px",
+            margin: "auto",
+            marginBottom: "60px",
+            textAlign: "center",
           }}
         >
-          Connect with 10,000 customers in 1 hour with real-time data insights,
-          revolutionizing business outreach with AI-human synergy.
-        </Typography>
-      </Box>
-
-
-
+          <Typography
+            sx={{
+              fontFamily: "Mulish",
+              fontWeight: 800,
+              fontSize: "24px",
+              lineHeight: "36px",
+              color: "#000000",
+            }}
+          >
+            Connect with 10,000 customers in 1 hour with real-time data
+            insights, revolutionizing business outreach with AI-human synergy.
+          </Typography>
+        </Box>
+      </div>
 
       {/* Buttons */}
-      <Box sx={{ display: "flex", gap: "15px", marginBottom: "60px" }}>
-        <Button sx={ButtonStyling}>VISIT OUR WEBSITE</Button>
-        <Button sx={ButtonStyling}>BOOK A MEETING</Button>
-      </Box>
-
-
-
-
+      <div data-aos="fade-up">
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: { xs: "column", sm: "row" },
+            gap: "15px",
+            marginBottom: "60px",
+          }}
+        >
+          <Button sx={ButtonStyling}>VISIT OUR WEBSITE</Button>
+          <Button sx={ButtonStyling}>BOOK A MEETING</Button>
+        </Box>
+      </div>
 
       {/* Mobile Form */}
       <div data-aos="fade-down">
         <Stack
-          direction={"row"}
+          direction={{ xl: "row" }}
           justifyContent={"space-around"}
           alignItems={"center"}
           sx={{
             width: "100%",
             maxWidth: "1400px",
+            margin: "0 auto",
           }}
         >
-          <div data-aos="fade-left"> 
+          <div data-aos="fade-left">
             <Typography
               component={"h1"}
               sx={{
                 fontFamily: "Mulish",
                 fontWeight: 800,
-                fontSize: "167px",
+                fontSize: { xs: "127px", sm: "167px" },
                 top: "892px",
                 color: "#FF4D00",
               }}
@@ -252,34 +265,33 @@ const Landing_2 = () => {
             </Box>
           </Box>
           <div data-aos="fade-right">
-          <Typography
-            component={"h1"}
-            sx={{
-              fontFamily: "Mulish",
-              fontWeight: 800,
-              fontSize: "167px",
-              top: "892px",
-              right: "200px",
-              backgroundImage:
-                "linear-gradient(90deg, #FF4D00 0%, #FFA06B 100%)",
-              backgroundClip: "text",
-              textFillColor: "transparent",
-              display: "inline",
-            }}
-          >
-            Agent
-          </Typography>
+            <Typography
+              component={"h1"}
+              sx={{
+                fontFamily: "Mulish",
+                fontWeight: 800,
+                fontSize: { xs: "127px", sm: "167px" },
+                top: "892px",
+                right: "200px",
+                backgroundImage:
+                  "linear-gradient(90deg, #FF4D00 0%, #FFA06B 100%)",
+                backgroundClip: "text",
+                textFillColor: "transparent",
+                display: "inline",
+              }}
+            >
+              Agent
+            </Typography>
           </div>
-          
         </Stack>
       </div>
 
       {/* Decorative Images */}
-      {/* These are the Deorative Images */}
       <Box
         component="img"
         src={Left}
         sx={{
+          display: { xs: "none", lg: "inline" },
           position: "absolute",
           top: "349px",
           left: 0,
@@ -291,6 +303,7 @@ const Landing_2 = () => {
         component="img"
         src={Right}
         sx={{
+          display: { xs: "none", lg: "inline" },
           position: "absolute",
           top: "1150px",
           right: 0,
