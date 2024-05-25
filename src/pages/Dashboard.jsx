@@ -83,7 +83,7 @@ export default function Dashboard() {
 
   return (
     <div data-aos="fade-down">
-      <Box>
+      <Box sx={{ overflow: "hidden" }}>
         <Drawer
           PaperProps={DrawerProps}
           open={open}
@@ -179,7 +179,7 @@ export default function Dashboard() {
                 >
                   {mockCardData.map((card, index) => {
                     return (
-                      <Box padding={{xs:"16px", xxl:"0"}} key={index}>
+                      <Box padding={{ xs: "16px", xxl: "0" }} key={index}>
                         <CustomCard
                           mainIcon={card.icon}
                           number={card.number}
