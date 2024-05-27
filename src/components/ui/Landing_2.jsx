@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 import { Box, Button, Stack, TextField, Typography } from "@mui/material";
 import React, { useEffect } from "react";
 import Logo from "../../assets/Common/Logo.svg";
@@ -318,8 +320,44 @@ const Landing_2 = () => {
           height: "auto",
         }}
       />
+      <DashboardLink />
     </Box>
   );
 };
 
 export default Landing_2;
+
+const DashboardLink = () => {
+  return (
+    <div data-aos="fade-up">
+      <Box
+        sx={{
+          margin: "150px 0",
+          marginRight: "33px",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        <Link
+          className="dashboard_link"
+          style={{
+            color: "#FFFFFF",
+            backgroundColor: "#FF4D00",
+            padding: "14px 60px",
+            textDecoration: "none",
+            fontSize: "13px",
+            fontWeight: "800",
+            textTransform: "uppercase",
+            letterSpacing: "1.5px",
+            borderRadius: "6px",
+            fontFamily: "Mulish",
+          }}
+          to={"/dashboard"}
+        >
+          Go to Dashboard {">"}
+        </Link>
+      </Box>
+    </div>
+  );
+};
