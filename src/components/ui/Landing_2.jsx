@@ -50,9 +50,16 @@ const Landing_2 = () => {
             height: "86px",
             width: { xs: "339px", md: "429px" },
             marginBottom: "60px",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
           }}
         >
-          <Box component="img" src={Logo} sx={{ width: "100%" }} />
+          <Box
+            component="img"
+            src={Logo}
+            sx={{ width: { xs: "90%", sm: "100%" } }}
+          />
         </Box>
       </div>
 
@@ -71,8 +78,8 @@ const Landing_2 = () => {
             sx={{
               fontWeight: 800,
               fontFamily: "Mulish",
-              lineHeight: "86px",
-              fontSize: "64px",
+              lineHeight: { sm: "86px" },
+              fontSize: { xs: "50px", sm: "64px" },
             }}
           >
             Get 2x Revenue With{" "}
