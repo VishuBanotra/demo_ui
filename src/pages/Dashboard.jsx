@@ -82,7 +82,7 @@ export default function Dashboard() {
   };
 
   return (
-    <div data-aos="fade-down">
+    <div id="#" data-aos="fade-down">
       <Box sx={{ overflow: "hidden" }}>
         <Drawer
           PaperProps={DrawerProps}

@@ -327,7 +327,7 @@ const Landing_2 = () => {
 
 export default Landing_2;
 
-const DashboardLink = () => {
+export const DashboardLink = () => {
   return (
     <div data-aos="fade-up">
       <Box
@@ -339,7 +339,6 @@ const DashboardLink = () => {
         }}
       >
         <Link
-          className="dashboard_link"
           style={{
             color: "#FFFFFF",
             backgroundColor: "#FF4D00",
