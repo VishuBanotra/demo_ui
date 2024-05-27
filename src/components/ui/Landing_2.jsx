@@ -49,7 +49,7 @@ const Landing_2 = () => {
           sx={{
             height: "86px",
             width: { xs: "339px", md: "429px" },
-            marginBottom: "60px",
+            marginBottom: { xs: "40px", sm: "60px" },
             display: "flex",
             alignItems: "center",
             justifyContent: "center",

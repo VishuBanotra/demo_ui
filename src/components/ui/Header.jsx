@@ -95,8 +95,7 @@ const Header = () => {
         <Toolbar
           sx={{
             bgcolor: "#FFFFFF",
-            display: "flex",
-            justifyContent: { md: "space-between" },
+
             alignItems: "center",
             height: "84px",
           }}
@@ -110,39 +109,48 @@ const Header = () => {
           </IconButton>
 
           <Box
-            component={"img"}
-            src={Logo}
             sx={{
-              margin: { lg: "0 44px" },
-              width: "246px",
-              height: "49px",
+              width: "100%",
+              display: "flex",
+              justifyContent: { xs: "center", md: "space-between" },
+              alignItems: "center",
             }}
-          />
-
-          <Box sx={{ display: { xs: "none", lg: "block" } }}>
-            <List
+          >
+            <Box
+              component={"img"}
+              src={Logo}
               sx={{
-                display: "flex",
-                justifyContent: "space-between",
-                alignItems: "center",
+                margin: { lg: "0 44px" },
+                width: "246px",
+                height: "49px",
               }}
-            >
-              <ListItem>
-                <Link sx={linkStyle}>About</Link>
-              </ListItem>
-              <ListItem>
-                <Link sx={linkStyle}>How It Works</Link>
-              </ListItem>
-              <ListItem>
-                <Link sx={linkStyle}>Pricing</Link>
-              </ListItem>
-            </List>
-          </Box>
+            />
 
-          <Box sx={{ display: { xs: "none", md: "block" } }}>
-            <Link sx={buttonStyle} component={"button"}>
-              Login / Signup
-            </Link>
+            <Box sx={{ display: { xs: "none", lg: "block" } }}>
+              <List
+                sx={{
+                  display: "flex",
+                  justifyContent: "space-between",
+                  alignItems: "center",
+                }}
+              >
+                <ListItem>
+                  <Link sx={linkStyle}>About</Link>
+                </ListItem>
+                <ListItem>
+                  <Link sx={linkStyle}>How It Works</Link>
+                </ListItem>
+                <ListItem>
+                  <Link sx={linkStyle}>Pricing</Link>
+                </ListItem>
+              </List>
+            </Box>
+
+            <Box sx={{ display: { xs: "none", md: "block" } }}>
+              <Link sx={buttonStyle} component={"button"}>
+                Login / Signup
+              </Link>
+            </Box>
           </Box>
         </Toolbar>
       </AppBar>
