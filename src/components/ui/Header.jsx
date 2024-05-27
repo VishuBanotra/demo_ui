@@ -95,15 +95,16 @@ const Header = () => {
         <Toolbar
           sx={{
             bgcolor: "#FFFFFF",
-
+            display: "flex",
             alignItems: "center",
             height: "84px",
           }}
         >
           <IconButton
+            size="large"
             edge="start"
             onClick={toggleDrawer(true)}
-            sx={{ display: { lg: "none" }, mr: 2 }}
+            sx={{ display: { lg: "none" }, mr: 2, color: "#36454F" }}
           >
             <MenuIcon />
           </IconButton>
@@ -112,7 +113,7 @@ const Header = () => {
             sx={{
               width: "100%",
               display: "flex",
-              justifyContent: { xs: "center", md: "space-between" },
+              justifyContent: "space-between",
               alignItems: "center",
             }}
           >
