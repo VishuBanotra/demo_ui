@@ -332,8 +332,7 @@ const DashboardLink = () => {
     <div data-aos="fade-up">
       <Box
         sx={{
-          margin: "150px 0",
-          marginRight: "33px",
+          margin: "150px auto",
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
